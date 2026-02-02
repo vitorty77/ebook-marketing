@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marketing Digital Avançado - E-book Premium</title>
+
+    <meta name="description" content="E-book premium de marketing digital avançado com estratégias de vendas, tráfego pago e automação para escalar negócios online.">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --gold: #d4af37;
+            --gold-light: #f4d160;
+            --gold-dark: #b8960c;
+            --black: #0a0a0a;
+            --black-light: #1a1a1a;
+            --black-lighter: #2a2a2a;
+            --white: #ffffff;
+            --gray: #888888;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--black);
+            color: var(--white);
+            line-height: 1.8;
+            overflow-x: hidden;
+        }
+
+        .ebook {
+            max-width: 100%;
+            margin: 0 auto;
+        }
+
+        .slide {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 60px 80px;
+            position: relative;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.1);
+        }
+
+        .slide::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(ellipse at 30% 20%, rgba(212, 175, 55, 0.03) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        .cover {
+            text-align: center;
+            padding: 100px 80px;
+            background: linear-gradient(180deg, var(--black) 0%, var(--black-light) 100%);
+        }
+
+        .cover-badge {
+            display: inline-block;
+            padding: 8px 24px;
+            border: 1px solid var(--gold);
+            color: var(--gold);
+            font-size: 12px;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            margin-bottom: 40px;
+        }
+
+        .cover h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 72px;
+            color: var(--gold);
+            margin-bottom: 20px;
+        }
+
+        .cover .subtitle {
+            font-size: 24px;
+            color: var(--gray);
+            max-width: 700px;
+            margin: 0 auto 60px;
+        }
+
+        .cover-decoration {
+            width: 100px;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--gold), transparent);
+            margin: 40px auto;
+        }
+
+        .cover-author {
+            font-size: 14px;
+            color: var(--gray);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-number {
+            font-family: 'Playfair Display', serif;
+            font-size: 14px;
+            color: var(--gold);
+            letter-spacing: 4px;
+            margin-bottom: 16px;
+        }
+
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 48px;
+            color: var(--gold);
+            margin-bottom: 20px;
+        }
+
+        .section-subtitle {
+            font-size: 18px;
+            color: var(--gray);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px;
+        }
+
+        .content-card {
+            background: var(--black-light);
+            padding: 40px;
+            border: 1px solid rgba(212, 175, 55, 0.1);
+            transition: 0.4s;
+        }
+
+        .content-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(212, 175, 55, 0.3);
+        }
+
+        .card-icon {
+            width: 50px;
+            height: 50px;
+            border: 1px solid var(--gold);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 24px;
+            font-size: 22px;
+            color: var(--gold);
+        }
+
+        .content-card h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 24px;
+            color: var(--gold);
+            margin-bottom: 16px;
+        }
+
+        .content-card p {
+            font-size: 15px;
+            color: #ccc;
+        }
+
+        .premium-list {
+            list-style: none;
+            margin: 40px 0;
+        }
+
+        .premium-list li {
+            margin-bottom: 20px;
+            padding-left: 24px;
+            position: relative;
+        }
+
+        .premium-list li::before {
+            content: '✦';
+            position: absolute;
+            left: 0;
+            color: var(--gold);
+        }
+
+        .warning-box {
+            background: rgba(239, 68, 68, 0.1);
+            border: 1px solid rgba(239, 68, 68, 0.3);
+            padding: 30px;
+        }
+
+        .warning-box h4 {
+            color: #ef4444;
+            margin-bottom: 20px;
+        }
+
+        .cta-slide {
+            text-align: center;
+            background: linear-gradient(180deg, var(--black) 0%, var(--black-light) 100%);
+        }
+
+        .cta-button {
+            padding: 20px 50px;
+            background: linear-gradient(135deg, var(--gold), var(--gold-dark));
+            color: #000;
+            font-weight: 600;
+            text-decoration: none;
+            letter-spacing: 2px;
+            display: inline-block;
+        }
+
+        @media (max-width: 1024px) {
+            .content-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+<div class="ebook">
+
+<section class="slide cover">
+    <div class="cover-badge">E-book Premium</div>
+    <h1>Marketing Digital<br>Avançado</h1>
+    <p class="subtitle">Estratégias comprovadas para escalar negócios digitais e multiplicar resultados</p>
+    <div class="cover-decoration"></div>
+    <p class="cover-author">Por Jose Vitor</p>
+</section>
+
+<section class="slide">
+    <div class="section-header">
+        <p class="section-number">CAPÍTULO 01</p>
+        <h2 class="section-title">Mentalidade do Milionário Digital</h2>
+        <p class="section-subtitle">Antes de conquistar resultados, você precisa transformar sua mente</p>
+    </div>
+
+    <div class="content-grid">
+        <div class="content-card">
+            <div class="card-icon">◆</div>
+            <h3>Abundância</h3>
+            <p>O mercado digital é infinito. Quem entende isso para de competir por migalhas.</p>
+        </div>
+
+        <div class="content-card">
+            <div class="card-icon">★</div>
+            <h3>Construção de Ativos</h3>
+            <p>Milionários constroem sistemas, funis e audiências que trabalham 24/7.</p>
+        </div>
+    </div>
+</section>
+
+<section class="slide">
+    <div class="section-header">
+        <p class="section-number">ERROS CRÍTICOS</p>
+        <h2 class="section-title">O Que Está Travando Seu Crescimento</h2>
+    </div>
+
+    <div class="warning-box">
+        <h4>⚠ Erros Mais Comuns</h4>
+        <ul>
+            <li>Foco em seguidores, não em clientes</li>
+            <li>Produtos sem validação</li>
+            <li>Tráfego sem estratégia</li>
+            <li>Falta de métricas e acompanhamento</li>
+        </ul>
+    </div>
+</section>
+
+<section class="slide cta-slide">
+    <h2>Comece Agora</h2>
+    <p class="subtitle">Tenha acesso imediato ao método completo</p>
+
+    <div style="font-size:60px; margin:30px 0;">R$ 97</div>
+
+    <a href="#checkout" class="cta-button" aria-label="Comprar e-book Marketing Digital Avançado">
+        Comprar Agora
+    </a>
+
+    <p style="margin-top:40px; font-size:14px; color:#666;">
+        © 2026 Marketing Digital Avançado
+    </p>
+</section>
+
+</div>
+</body>
+  </html>
